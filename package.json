@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "main": "dist-electron/main.cjs",
+  "main": "electron/main.cjs",
   "scripts": {
     "dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build && tsc -p electron/tsconfig.electron.json",
@@ -25,4 +25,3 @@
     "wait-on": "^8.0.1"
   }
 }
-
