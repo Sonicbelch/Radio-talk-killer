@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist-electron/main.cjs",
   "scripts": {
-    "dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "dev": "concurrently -k \"vite\" \"tsc -p electron/tsconfig.electron.json --watch\" \"wait-on http://localhost:5173 dist-electron/main.cjs && electron .\"",
     "build": "vite build && tsc -p electron/tsconfig.electron.json",
     "preview": "vite preview"
   },
@@ -25,4 +25,3 @@
     "wait-on": "^8.0.1"
   }
 }
-
